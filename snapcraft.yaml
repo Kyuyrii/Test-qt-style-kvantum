@@ -5,6 +5,9 @@ platforms:
   amd64:
     build-on: [amd64]
     build-for: [amd64]
+  arm64:
+    build-on: [arm64]
+    build-for: [arm64]
 summary: A Linux SVG-based theme engine for Qt and KDE 
 description: |
    This Snap allows other Snaps to access Kvantum, but it's not as simple as a GTK theme Snap.
