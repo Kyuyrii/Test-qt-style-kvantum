@@ -58,7 +58,6 @@ parts:
       make install DESTDIR=$CRAFT_PART_INSTALL
       mkdir -p $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/styles/
       mv -f $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/styles/libkvantum.so $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/styles/
-      rm -r $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/
 
   lxqt-qtplugin:
     after: [libdbusmenu-lxqt, libfm-qt, libqtxdg, lxqt-build-tools]
@@ -73,7 +72,6 @@ parts:
       craftctl default
       mkdir -p $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/platformthemes/
       mv -f $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/platformthemes/libqtlxqt.so $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/platformthemes/
-      rm -r $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/
 
   libdbusmenu-lxqt:
     plugin: cmake
@@ -121,7 +119,6 @@ parts:
       craftctl default
       mkdir -p $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/iconengines/
       mv -f $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/iconengines/libQt6XdgIconPlugin.so $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/iconengines/
-      rm -r $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/
 
   lxqt-build-tools:
     plugin: cmake
