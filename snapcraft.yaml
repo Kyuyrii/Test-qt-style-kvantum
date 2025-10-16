@@ -77,11 +77,6 @@ parts:
       mkdir -p $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/platformthemes/
       mv -f $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/platformthemes/libqtlxqt.so $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/platformthemes/
       rm -r $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/
-    prime: &primelist
-      - -usr/include
-      - -usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/cmake
-      - -usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pkgconfig
-      - -usr/share/cmake
 
   libdbusmenu-lxqt:
     plugin: cmake
@@ -91,7 +86,6 @@ parts:
     build-environment: *build-environment
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
-    prime: *primelist
 
   libfm-qt:
     after: [lxqt-build-tools, lxqt-menu-data]
@@ -108,7 +102,6 @@ parts:
     build-environment: *build-environment
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
-    prime: *primelist
 
   lxqt-menu-data:
     plugin: cmake
@@ -118,7 +111,6 @@ parts:
     build-environment: *build-environment
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
-    prime: *primelist
 
   libqtxdg:
     plugin: cmake
@@ -133,7 +125,6 @@ parts:
       mkdir -p $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/iconengines/
       mv -f $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/iconengines/libQt6XdgIconPlugin.so $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/iconengines/
       rm -r $CRAFT_PART_INSTALL/snap/kde-qt6-core24-sdk/
-    prime: *primelist
 
   lxqt-build-tools:
     plugin: cmake
@@ -143,4 +134,3 @@ parts:
     build-environment: *build-environment
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
-    prime: *primelist
